@@ -33,5 +33,9 @@ namespace EmployeeService.Services
         {
             _repo.UpdateEnable(id, enable);
         }
+        public DataTable GetQueryResult(string query)
+        {
+            return _repo.GetQueryResult(query);
+        }
     }
 }

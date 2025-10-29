@@ -55,5 +55,27 @@ namespace EmployeeService.Services
                 }
             }
         }
+
+        public DataTable GetQueryResult(string query) // "SELECT * FROM Employee"
+        {
+            var dt = new DataTable();
+
+            using (var conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+
+                using (var command = conn.CreateCommand())
+                {
+                    command.CommandText = query;
+
+                    using (var adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dt);
+                    }
+                }
+            }
+
+            return dt;
+        }
     }
 }

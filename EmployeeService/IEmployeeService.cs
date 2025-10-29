@@ -1,4 +1,5 @@
-﻿using System.ServiceModel;
+﻿using System.Data;
+using System.ServiceModel;
 using System.ServiceModel.Web;
 
 
@@ -18,6 +19,11 @@ namespace EmployeeService
         [WebInvoke(Method = "PUT", UriTemplate = "EnableEmployee?id={id}", 
             BodyStyle = WebMessageBodyStyle.WrappedRequest)]
         void EnableEmployee(int id, int enable);
+
+        [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "GetQueryResult",
+            ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
+        DataTable GetQueryResult(string query);
     }
 
 	

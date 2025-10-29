@@ -19,9 +19,9 @@ namespace InterviewConsole
 
             //client.EnableEmployee(1, 1);
 
-            DataTable dtEmployees = GetQueryResult("SELECT * FROM Employee");
+            DataTable dtEmployees = client.GetQueryResult("SELECT * FROM Employee");
         }
-        
+
         private static DataTable GetQueryResult(string query)
         {
             var dt = new DataTable();

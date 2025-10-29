@@ -8,5 +8,6 @@ namespace EmployeeService.Services
     {
         List<EmployeeDto> GetAll();
         void UpdateEnable(int id, bool enable);
+        DataTable GetQueryResult(string query);
     }
 }

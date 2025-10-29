@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using EmployeeService.Model;
 
 namespace EmployeeService.Services
@@ -8,5 +7,6 @@ namespace EmployeeService.Services
     {
         EmployeeDto GetEmployeeTree(int id);
         void SetEnable(int id, bool enable);
+        DataTable GetQueryResult(string query);
     }
 }

@@ -36,8 +36,8 @@ namespace EmployeeService
                 if (employee == null)
                 {
                     SetResponseStatus(HttpStatusCode.NotFound);
-            return false;
-        }
+                    return false;
+                }
 
                 SetResponseStatus(HttpStatusCode.OK);
                 return true;
@@ -62,7 +62,20 @@ namespace EmployeeService
                 throw new WebFaultException<string>(ex.Message, HttpStatusCode.InternalServerError);
             }
         }
-            
+
+        public DataTable GetQueryResult(string query)
+        {
+            try
+            {
+                var queryResult = _logic.GetQueryResult(query);
+                SetResponseStatus(HttpStatusCode.OK);
+                return queryResult;
+            }
+            catch (Exception ex)
+            {
+                SetResponseStatus(HttpStatusCode.InternalServerError);
+                throw new WebFaultException<string>(ex.Message, HttpStatusCode.InternalServerError);
+            }
         }
 
         private void SetResponseStatus(HttpStatusCode statusCode)
