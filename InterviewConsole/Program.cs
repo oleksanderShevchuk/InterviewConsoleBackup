@@ -12,6 +12,13 @@ namespace InterviewConsole
     {
         static void Main(string[] args)
         {
+            var client = new EmployeeService.EmployeeService();
+
+            //var IsEmployee = client.GetEmployeeById(1);
+            //var IsEmployee2 = client.GetEmployeeById(2);
+
+            //client.EnableEmployee(1, 1);
+
             DataTable dtEmployees = GetQueryResult("SELECT * FROM Employee");
         }
         

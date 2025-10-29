@@ -51,6 +51,12 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmployeeService\EmployeeService.csproj">
+      <Project>{80446dae-c95c-4208-9bb4-a2064ed0ba43}</Project>
+      <Name>EmployeeService</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

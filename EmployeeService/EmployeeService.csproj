@@ -114,6 +114,10 @@
     <Compile Include="IEmployeeService.cs" />
     <Compile Include="Model\EmployeeDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\EmployeeRepository.cs" />
+    <Compile Include="Services\EmployeeServiceLogic.cs" />
+    <Compile Include="Services\IEmployeeRepository.cs" />
+    <Compile Include="Services\IEmployeeServiceLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
