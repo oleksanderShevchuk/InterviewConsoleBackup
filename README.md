@@ -1,6 +1,5 @@
-# InterviewConsoleBackup
-
 # EmployeeService
+
 A simple WCF service for managing employee data.
 
 ## Technologies
