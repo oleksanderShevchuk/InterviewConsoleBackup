@@ -3,7 +3,7 @@
 A simple WCF service for managing employee data.
 
 ## Technologies
-- .NET Framework 4.8
+- .NET Framework 4.5.2
 - WCF (Windows Communication Foundation)
 - SQL Server / LocalDB
 - ADO.NET (SqlConnection, SqlCommand, SqlDataAdapter)
